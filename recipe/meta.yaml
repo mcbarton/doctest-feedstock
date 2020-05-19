@@ -1,5 +1,5 @@
 {% set name = "doctest" %}
-{% set version = "2.3.7" %}
+{% set version = "2.3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   - url: https://raw.githubusercontent.com/onqtam/doctest/{{ version }}/doctest/doctest.h
-    sha256: dc617544b70d88b1ab939f1e5cf365a3848d75635e05a68459d8a354e4a89aba
+    sha256: 8c5b8c4adbe423b29a990ba4cfc2765be482d2f3214c241bfcdc178ad7bae8fa
   - url: https://raw.githubusercontent.com/onqtam/doctest/{{ version }}/LICENSE.txt
     sha256: 2ab6583af88018c4c6cadf8363bf3625505d117ac279ac174d935d992bac3592
 
 build:
   number: 0
-  script: "mkdir -p $PREFIX/include && cp doctest.h $PREFIX/include/doctest.h"  # [unix]
+  script: mkdir -p $PREFIX/include && cp doctest.h $PREFIX/include/doctest.h  # [unix]
   skip: true  # [win]
 
 test:
@@ -26,7 +26,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'The fastest feature-rich C++11/14/17/20 single-header testing framework for unit tests and TDD'
+  summary: The fastest feature-rich C++11/14/17/20 single-header testing framework for unit tests and TDD
 
   description: |
     doctest is a new C++ testing framework but is by far
