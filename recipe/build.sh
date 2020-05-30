@@ -1,10 +1,6 @@
 #!/bin/bash
 set -ex
 
-mkdir -p $PREFIX/include
-cp doctest.h $PREFIX/include/doctest.h  # [unix]
-
-
 mkdir -p out/release
 cd out/release
 cmake \
