@@ -6,14 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://raw.githubusercontent.com/onqtam/doctest/{{ version }}/doctest/doctest.h
-    sha256: 8c5b8c4adbe423b29a990ba4cfc2765be482d2f3214c241bfcdc178ad7bae8fa
-  - url: https://raw.githubusercontent.com/onqtam/doctest/{{ version }}/LICENSE.txt
-    sha256: 2ab6583af88018c4c6cadf8363bf3625505d117ac279ac174d935d992bac3592
+  - url: https://github.com/onqtam/doctest/archive/{{ version }}.zip
+    sha256: 2819d59d60ca78403da5dfbda7153a23ea5da73776cd6e49bf407d2dff78f4dd
 
 build:
-  number: 0
-  script: mkdir -p $PREFIX/include && cp doctest.h $PREFIX/include/doctest.h  # [unix]
+  number: 1
   skip: true  # [win]
 
 test:
