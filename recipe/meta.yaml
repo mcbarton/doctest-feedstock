@@ -1,5 +1,5 @@
 {% set name = "doctest" %}
-{% set version = "2.4.9" %}
+{% set version = "2.4.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/onqtam/doctest/archive/v{{ version }}.zip
-    sha256: 88a552f832ef3e4e7b733f9ab4eff5d73d7c37e75bebfef4a3339bf52713350d
+    sha256: 64d725def864f37576ef3d0454468881cadbdccbc9d96a1069af0b551ae5d0c7
 
 build:
   number: 0
