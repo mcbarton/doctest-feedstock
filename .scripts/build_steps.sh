@@ -32,10 +32,10 @@ pkgs_dirs:
 CONDARC
 
 
-mamba install --update-specs --yes --quiet --channel conda-forge \
-    conda-build pip boa conda-forge-ci-setup=3
-mamba update --update-specs --yes --quiet --channel conda-forge \
-    conda-build pip boa conda-forge-ci-setup=3
+mamba install --yes --quiet --channel conda-forge \
+    conda-build pip boa conda-forge-ci-setup
+mamba update --yes --quiet --channel conda-forge \
+    conda-build pip boa conda-forge-ci-setup
 
 # set up the condarc
 setup_conda_rc "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
